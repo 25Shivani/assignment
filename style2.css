@@ -1,0 +1,58 @@
+#gameFrame {
+ background-color: black;
+ height: 600px;
+ width: 800px;
+ margin: auto;
+ position: relative; 
+ overflow: hidden;  
+
+}
+.player {
+    width: 150px;
+    height: 400px;
+    position: absolute;
+    background-color: beige;
+    bottom: -400px;
+    transition: all .5s;
+}
+.player.showing {
+    bottom: 0;
+}
+.player.shooting {
+    background-color: red;
+}
+#player1 { left: 5px;}
+#player2 { left: 645px;}
+.player.dead {
+background-color: gray;
+height: 50px;
+}
+
+#healthBar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 100%;
+    background-color: coral;
+    transition: width .5s;
+}
+.scoreboard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 300px;
+    font-family: 'Quicksand',sans-serif;
+
+}
+.scoreboard__name,
+.scoreboard__score {
+    padding: 10px;
+    text-align: center;
+}
+.scoreboard__name {
+    font-weight: bold;
+    border-bottom: 10px solid #ddd;
+}
+.scoreboard__score {
+  font-size: 2em;  
+}
